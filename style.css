@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.wrapper {
+    max-width: 1100px;
+}
+
+.wrapper .gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery .image {
+    width: calc(100% / 3);
+    padding: 7px;
+}
+
+.gallery .image img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.gallery span {
+    display: flex;
+    width: 100%;
+}
