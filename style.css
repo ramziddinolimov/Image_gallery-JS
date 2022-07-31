@@ -119,3 +119,9 @@ body {
 .img-box .slide.next {
     right: 0;
 }
+
+.prewiew-box .details .icon {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 20px;
+}
