@@ -61,11 +61,22 @@ body {
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.9);
     background: #fff;
     padding: 0 5px 5px 5px;
     border-radius: 3px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* jsda 4-qatorni yozganimizda yozamiz showni */
+
+.prewiew-box.show{ 
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
 }
 
 .prewiew-box .img-box {
