@@ -3,13 +3,16 @@ const previewBoxElement = document.querySelector(".prewiew-box")  // 2
 const closeIconElement = previewBoxElement.querySelector(".icon")  // 5
 const previewImgElement = previewBoxElement.querySelector("img")  // 8 htmldan imgni 6-o'chiramz
 
+console.log(galleryElement);
+
 
 window.onload = () => {  // 3
     for(let i = 0; i < galleryElement.length; i++) {
+        let newIndex = i
         galleryElement[i].onclick = () => {
             console.log(i);
             function preview(){  // 7
-                let selectedImgUrl = galleryElement[i].querySelector("img").src
+                let selectedImgUrl = galleryElement[newIndex].querySelector("img").src
                 previewImgElement.src = selectedImgUrl
                 console.log(selectedImgUrl);
             }
