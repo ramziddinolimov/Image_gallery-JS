@@ -3,7 +3,7 @@ const previewBoxElement = document.querySelector(".prewiew-box")  // 2
 const closeIconElement = previewBoxElement.querySelector(".icon")  // 5
 const previewImgElement = previewBoxElement.querySelector("img")  // 8 htmldan imgni 6-o'chiramz
 
-console.log(galleryElement);
+// console.log(galleryElement);
 
 
 window.onload = () => {  // 3
@@ -17,6 +17,7 @@ window.onload = () => {  // 3
                 let selectedImgUrl = galleryElement[newIndex].querySelector("img").src
                 previewImgElement.src = selectedImgUrl
                 console.log(selectedImgUrl);
+                
             }
 
             const prevBtnElement = document.querySelector(".prev")
@@ -31,7 +32,7 @@ window.onload = () => {  // 3
             }
             prevBtnElement.addEventListener("click", event => {
                 newIndex--;
-                if(newIndex >= galleryElement.length - 1){
+                if(newIndex == 0){
                     preview()
                     prevBtnElement.style.display = "none"
                 } else {
@@ -42,12 +43,12 @@ window.onload = () => {  // 3
 
             nextBtnElement.addEventListener("click", event => {
                 newIndex++;
-                if(newIndex == 0){
+                if(newIndex >= galleryElement.length - 1){
                     preview()
                     nextBtnElement.style.display = "none"
                 } else {
                     preview()
-                    nextBtnElement.style.display = "block"
+                    prevBtnElement.style.display = "block"
                 }
             })
             preview()
