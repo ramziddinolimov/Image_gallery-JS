@@ -75,7 +75,7 @@ const nextBtnElement = document.querySelector(".next")
 const currentImgElement = document.querySelector(".current-img")
 const totalImgElement = document.querySelector(".total-img")
 // console.log(galleryElement
-var index = 0;
+let index = 0;
 function preview(){  // 7
   previewImgElement.src = galleryElement[globalThis.index].querySelector("img").src;
   if(globalThis.index == 0) {
@@ -115,7 +115,9 @@ closeIconElement.addEventListener("click", event => {
 })
 window.onload = () => {  // 3
     for(let i = 0; i < galleryElement.length; i++) {
+        totalImgElement.textContent = galleryElement.length
         galleryElement[i].onclick = () => {
+            currentImgElement.textContent = index + 1;
             globalThis.index = i;
             globalThis.preview();
         }
